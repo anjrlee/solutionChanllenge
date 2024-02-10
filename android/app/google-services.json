@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "953815718685",
+    "project_id": "gdsc-solutionchanllenge2024",
+    "storage_bucket": "gdsc-solutionchanllenge2024.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:953815718685:android:c82f2904c8558ab35e5ff4",
+        "android_client_info": {
+          "package_name": "com.example.hello_world"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCH3ZAdcvz_wD136KGrgQyKq47HEPCIf3M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
