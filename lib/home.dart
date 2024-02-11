@@ -1,99 +1,9 @@
 import 'package:flutter/material.dart';
 import 'shareLift.dart';
 import 'haveLift.dart';
-import 'home.dart';
 import 'personInfo.dart';
-void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Bottom Navigation Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _currentIndex = 0;
-
-  final List<Widget> _tabs = [
-    home(),
-    shareLift(),
-    haveLift(),
-    personInfo(),
-
-  ];
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 100, 100, 100),
-        title: Center(child:Text('GreenCarPool')),
-      ),
-      body: _tabs[_currentIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color.fromARGB(255, 187, 38, 38),
-        currentIndex: _currentIndex,
-        onTap: (int index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: 'Favorites',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.hail),
-            label: 'Profile',
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-
-/*
-import 'package:flutter/material.dart';
-import 'shareLift.dart';
-import 'haveLift.dart';
-
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Material Components',
-      home: homePage(),
-    );
-  }
-}
-
-class homePage extends StatelessWidget {
+class home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
      var shareLiftBtn = ElevatedButton(
@@ -175,10 +85,6 @@ class homePage extends StatelessWidget {
 
     
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 132, 123, 161),
-        title: Center(child:Text("GreenCabPool")),
-      ),
       body: Column(
          
           children:[
@@ -193,5 +99,3 @@ class homePage extends StatelessWidget {
     
   }
 }
-
-*/
